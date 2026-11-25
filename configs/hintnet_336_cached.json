@@ -1,0 +1,59 @@
+{
+  "model": {
+    "feature_dim": 512,
+    "num_queries": 16,
+    "num_prefix": 16,
+    "cross_attention_heads": 8,
+    "dropout": 0.1,
+    "num_classes": [
+      7,
+      8,
+      4
+    ],
+    "t5_model": "google-t5/t5-base",
+    "local_files_only": false,
+    "use_hqr": true,
+    "use_ptu": true,
+    "random_decoder": false,
+    "decoder_dim": 768,
+    "decoder_layers": 12,
+    "decoder_heads": 12,
+    "decoder_ff_dim": 3072,
+    "t5_revision": "a9723ea7f1b39c1eae772870f3b547bf6ef7e6c1"
+  },
+  "data": {
+    "input_mode": "tokens",
+    "num_frames": 8,
+    "image_size": 336,
+    "use_global": true,
+    "use_local": true
+  },
+  "backbone": {
+    "checkpoint": "pretrained/actionclip_vit_b16_8f.pt",
+    "use_text": true,
+    "visual_token_mode": "pooled",
+    "image_batch_size": 64,
+    "normalize": true,
+    "disable_cudnn": true,
+    "initialize_for_cached_inputs": true
+  },
+  "training": {
+    "epochs": 50,
+    "batch_size": 8,
+    "lr": 5e-05,
+    "weight_decay": 0.01,
+    "warmup_ratio": 0.1,
+    "num_workers": 4,
+    "seed": 42,
+    "grad_clip": 1.0,
+    "amp": false,
+    "cpu_threads": 4,
+    "validate": true,
+    "checkpoint_every": 10
+  },
+  "manifest": "data/actionclip_cache_r336/manifest.jsonl",
+  "root": null,
+  "labels": "configs/labels.json",
+  "compatibility": "configs/compatibility_81.json",
+  "lvp_weight": 5.0
+}

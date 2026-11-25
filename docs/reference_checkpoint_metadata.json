@@ -1,0 +1,46 @@
+{
+  "format": "hintnet_adapter_v1",
+  "file": "hintnet_336_seed42.pt",
+  "bytes": 8360554,
+  "sha256": "8a374d9969417c130ae39687cd4701619ca46539ba2c3fa0d3e997862cbc210a",
+  "source": {
+    "training_seed": 42,
+    "training_epochs": 50,
+    "input_resolution": 336,
+    "original_checkpoint_sha256": "0a021aafaa37f053dc39ef1dbcf6712234b552d774bcfed5577b4d42ecf19597",
+    "frozen_decoder_sha256": "bc66b2e4561117603202cb67ce87e0c1e8a41db47f077461c55947e6f09de923",
+    "t5_model": "google-t5/t5-base",
+    "t5_revision": "a9723ea7f1b39c1eae772870f3b547bf6ef7e6c1",
+    "actionclip_checkpoint_sha256": "0acfe0359eb73c02e93f0b1ee4761e7099747d15fe305aa833776f6681c8aa5b",
+    "trainable_tensor_count": 20,
+    "trainable_parameters": 2087731,
+    "note": "Frozen pretrained weights excluded. Exact frozen decoder identity is verified during loading. Inference-only adapter; use a full training snapshot for optimizer/RNG resume."
+  },
+  "label_names": {
+    "action": [
+      "Sitting",
+      "Looking around",
+      "Running",
+      "Using phone",
+      "Riding",
+      "Walking",
+      "Standing"
+    ],
+    "short_term": [
+      "Keeping",
+      "Entering a building",
+      "Searching",
+      "Crossing intersection",
+      "Talking",
+      "Turning",
+      "Approaching someone",
+      "Waiting"
+    ],
+    "long_term": [
+      "Daily routine",
+      "Going somewhere",
+      "Social interaction",
+      "Undetermined"
+    ]
+  }
+}

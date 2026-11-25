@@ -1,6 +1,5 @@
-# HINT-Net — 336 × 336
+# HINT-Net 
 
-[中文说明](README_zh-CN.md)
 
 HINT-Net predicts three labels for an observed person in an aerial video: **action (7 classes), short-term intention (8 classes), and long-term intention (4 classes)**. This source-code-only repository packages the **336 × 336 experimental variant** and its training and evaluation code. **No trained checkpoint or pretrained model weights are distributed here.** The paper's original image-size setting was 224 × 224; 336 is the evaluated higher-resolution variant.
 

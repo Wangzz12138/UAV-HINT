@@ -1,0 +1,6 @@
+{
+  "_note": "Reproduction label IDs follow the displayed order in paper Fig. 2. These are not supplied official dataset IDs; map original exports explicitly.",
+  "action": ["Sitting", "Looking around", "Running", "Using phone", "Riding", "Walking", "Standing"],
+  "short_term": ["Keeping", "Entering a building", "Searching", "Crossing intersection", "Talking", "Turning", "Approaching someone", "Waiting"],
+  "long_term": ["Daily routine", "Going somewhere", "Social interaction", "Undetermined"]
+}

@@ -1,0 +1,20 @@
+{
+  "split_kind": "Generated video-level split, not an official published split",
+  "ratio": [
+    7,
+    2,
+    1
+  ],
+  "seed": 42,
+  "video_counts": {
+    "train": 164,
+    "val": 47,
+    "test": 23
+  },
+  "instance_counts": {
+    "train": 249,
+    "val": 71,
+    "test": 33
+  },
+  "note": "One assigned training video has no retained valid person track; video and labelled-track counts differ."
+}

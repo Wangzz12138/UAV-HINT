@@ -1,0 +1,83 @@
+<View>
+  <Header value="UAV-HINT: Human Action and Hierarchical Intention Annotation"/>
+  <Video name="video" value="$video" frameRate="$fps"/>
+
+  <Header value="Environmental information: use author-provided labels and acquisition records; do not infer from video appearance"/>
+  <Header value="Scene: use the label assigned by the authors after data collection"/>
+  <Choices name="scene" toName="video" choice="single" required="true">
+    <Choice value="street"/>
+    <Choice value="park"/>
+    <Choice value="campus"/>
+    <Choice value="business district"/>
+  </Choices>
+
+  <Header value="Time: use acquisition records; morning 06:00–12:00, afternoon 12:00–18:00, evening 18:00–24:00 (start inclusive, end exclusive)"/>
+  <Choices name="time" toName="video" choice="single" required="true">
+    <Choice value="morning"/>
+    <Choice value="afternoon"/>
+    <Choice value="evening"/>
+  </Choices>
+
+  <Header value="Weather: read the authors' weather label from the full flight recording filename"/>
+  <Choices name="weather" toName="video" choice="single" required="true">
+    <Choice value="sunny"/>
+    <Choice value="rainy"/>
+    <Choice value="snowy"/>
+  </Choices>
+
+  <VideoRectangle name="box" toName="video"/>
+  <Labels name="videoLabels" toName="video" allowEmpty="false">
+    <Label value="person" background="red"/>
+  </Labels>
+
+  <Header value="Person-level information: select the corresponding person track first"/>
+  <Header value="Level 1: Action"/>
+  <Choices name="current_action" toName="video" choice="single" perRegion="true" required="false">
+    <Choice value="walking"/>
+    <Choice value="running"/>
+    <Choice value="standing"/>
+    <Choice value="sitting"/>
+    <Choice value="using phone"/>
+    <Choice value="looking around"/>
+    <Choice value="riding"/>
+  </Choices>
+
+  <Header value="Level 2: Short-term intention — verify within 30 s after the observation clip ends"/>
+  <Choices name="short_term_intention" toName="video" choice="single" perRegion="true" required="false">
+    <Choice value="turning"/>
+    <Choice value="keeping"/>
+    <Choice value="talking"/>
+    <Choice value="waiting"/>
+    <Choice value="entering a building"/>
+    <Choice value="searching"/>
+    <Choice value="approaching someone"/>
+    <Choice value="crossing intersection"/>
+  </Choices>
+
+  <Header value="Level 3: Long-term intention — infer from the full flight recording"/>
+  <Choices name="high_level_intention" toName="video" choice="single" perRegion="true" required="false">
+    <Choice value="undetermined"/>
+    <Choice value="daily routine"/>
+    <Choice value="social interaction"/>
+    <Choice value="going somewhere"/>
+  </Choices>
+
+  <Header value="Age"/>
+  <Choices name="age" toName="video" choice="single" perRegion="true" required="false">
+    <Choice value="adult"/>
+    <Choice value="child"/>
+    <Choice value="senior"/>
+  </Choices>
+
+  <Header value="Gender"/>
+  <Choices name="gender" toName="video" choice="single" perRegion="true" required="false">
+    <Choice value="male"/>
+    <Choice value="female"/>
+  </Choices>
+
+  <Header value="Person state"/>
+  <Choices name="state" toName="video" choice="single" perRegion="true" required="false">
+    <Choice value="alone"/>
+    <Choice value="gather"/>
+  </Choices>
+</View>
