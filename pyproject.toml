@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hintnet-336"
+version = "0.1.0"
+description = "HINT-Net hierarchical human intention prediction, 336-pixel research implementation"
+readme = "README.md"
+requires-python = ">=3.10"
+dynamic = ["dependencies"]
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
+[tool.setuptools.packages.find]
+include = ["hintnet*"]
+
+[tool.setuptools.package-data]
+"hintnet.vendor.actionclip" = ["*.gz", "LICENSE", "README.md"]
