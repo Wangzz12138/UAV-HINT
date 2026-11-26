@@ -1,4 +1,4 @@
-# UAV-HINT
+# UAV-HINT: A Dataset and Baseline for Hierarchical Human Intention Prediction from Aerial Perspectives
 
 ## Dataset
 
@@ -38,8 +38,8 @@ Each line of `manifest.jsonl` is a JSON record for one annotated person track. S
 Use Python 3.10.
 
 ```bash
-git clone https://github.com/Wangzz12138/UAV-HINT-A-Dataset-and-Baseline-for-Hierarchical-Human-Intention-Prediction-from-Aerial-Perspectives.git HINT-Net
-cd HINT-Net
+git clone https://github.com/Wangzz12138/UAV-HINT.git
+cd UAV-HINT
 python -m venv .venv
 ```
 
